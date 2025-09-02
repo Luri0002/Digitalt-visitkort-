@@ -1,15 +1,38 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import Cirkler from "../assets/images/Cirkler.svg";
+import blaacirkel from "../assets/images/blaacirkel.svg";
+import portræt from "../assets/images/portræt.webp";
+import loading from "../assets/images/loading.svg";
 ---
+
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+  <section class="grid grid-cols-24 grid-rows-24 h-[100vh]">
+    <Image class="col-[2_/_span_10] row-[5_/_span_18] rotate-90" src={Cirkler} alt="Cirkler i forskellige farver" />
+    <h1 class="col-[5_/_span_10] row-[13_/_span_4] text-9xl">Luna Ring</h1>
+    <h2 class="col-[12_/_span_4] row-[18_/_span_3] text-4xl">Digital <br /> Designer</h2>
+    <Image class="col-[22_/_span_2] row-[23_/_span_2]" src={blaacirkel} alt="Cirkler i forskellige farver" />
+  </section>
+  <section>
+    <h3>Skills</h3>
+    <p>UX RESEARCH, MULTIMEDIEDESIGN, CODING, UI DESIGN, GRAPHIC DESIGN, ANIMATION</p>
+    <Image src={Cirkler} alt="Cirkler i forskellige farver" />
+    <h3>Hej!</h3>
+    <p>Mit navn er Luna, jeg er 22 år og studerer multimediedesign på Erhvervsakademi København. Som digital designer, er jeg inspireret af mødet mellem klassiske designtendenser & moderne æstetik.</p>
+  </section>
+  <section>
+    <Image src={portræt} alt="Portrætfoto" />
+    <Image src={Cirkler} alt="Cirkler i forskellige farver" />
+    <h3>Software</h3>
+    <p>FIGMA VS CODE GIT/GITHUB ILLUSTRATOR PREMIERE PRO AFTER EFFECTS PHOTOSHOP</p>
+    <Image src={loading} alt="Loading animation" />
+  </section>
+  <section>
+    <Link variant="primary" size="small">Instagram</Link>
+    <Link href="https://www.linkedin.com/in/luna-ring-521175336/" target="_blank" variant="primary" size="medium">Linkedin</Link>
+    <Link href="mailto:lulubopsi@gmail.com" variant="primary" size="large">Email</Link>
+  </section>
 </MainLayout>
