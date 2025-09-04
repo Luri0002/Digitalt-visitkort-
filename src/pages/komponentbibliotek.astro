@@ -1,0 +1,16 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import Cirkler from "../assets/images/Cirkler.svg";
+---
+
+<MainLayout title="Komponentbibliotek">
+  <h1 class="uppercase text-5xl text-secondary-900">Komponentbibliotek</h1>
+  <section class="bg-accent-400 p-10 flex flex-col gap-7">
+    <Link variant="primary" size="small">Link: Primary small</Link>
+    <Link variant="primary" size="medium">Link: Primary medium</Link>
+    <Link variant="primary" size="large">Link: Primary large</Link>
+  </section>
+</MainLayout>
