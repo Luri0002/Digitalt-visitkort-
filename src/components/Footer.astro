@@ -6,15 +6,15 @@ import Link from "../components/Link.astro";
 ---
 
 <div id="kontakt" class="bg-accent-400 text-primary-900 grid grid-cols-12 mt-40 p-10">
-  <div class="col-span-8 justify-self-center md:col-span-6 md:justify-self-center">
-    <Image src={Cirkler} alt="Cirkler i forskellige farver" />
+  <div class="col-[3_/_span_8] md:col-span-6 md:justify-self-center">
+    <Image class="-mt-16 mb-20" src={Cirkler} alt="Cirkler i forskellige farver" />
   </div>
-  <div class="col-span-6 justify-self-center flex items-center gap-40 md:col-span-6 md:justify-self-center">
+  <div class="col-[3_/_span_8] flex items-center gap-40 md:col-span-6 md:justify-self-center">
     <div class="flex flex-col">
       <h3 class="uppercase">Kontakt</h3>
-      <Link class="uppercase" href="https://www.linkedin.com/in/luna-ring-521175336/" target="_blank" variant="primary" size="small sm:medium md:large">Instagram</Link>
-      <Link class="uppercase" href="https://www.linkedin.com/in/luna-ring-521175336/" target="_blank" variant="primary" size="small sm:medium md:large">Linkedin</Link>
-      <Link class="uppercase" href="mailto:lulubopsi@gmail.com" variant="primary" size="small sm:medium md:large">Email</Link>
+      <Link class="uppercase" href="https://www.linkedin.com/in/luna-ring-521175336/" target="_blank" variant="primary" size="large">Instagram</Link>
+      <Link class="uppercase" href="https://www.linkedin.com/in/luna-ring-521175336/" target="_blank" variant="primary" size="large">Linkedin</Link>
+      <Link class="uppercase" href="mailto:lulubopsi@gmail.com" variant="primary" size="large">Email</Link>
     </div>
     <div>
       <a href="#"><Image src={arrow} alt="Pil der peger opad" /></a>

@@ -13,14 +13,18 @@ import loading from "../assets/images/loading.svg";
 ---
 
 <MainLayout title="Titel">
-  <section class="container mx-auto grid grid-cols-24 grid-rows-[50px_50px_50px_50px_50px_50px_50px_50px_50px_50px]">
-    <Image class="col-[2_/_span_7] row-5 md:row-1 md:col-[2_/_span_20] md:row-1 rotate-90" src={Cirkler} alt="Cirkler i forskellige farver" />
+  <section class="container mx-auto grid grid-cols-12 mb-40">
+    <Image class="col-[2_/_span_10]" src={hero} alt="Luna Ring, farvede cirkler" />
+    <Heading htmlheading="h1" size="large" stylingclasses="col-[9_/_span_2] -mt-7">Digital<br />Designer</Heading>
+    <Image class="pl-3 col-[11_/_span_1] -mb-7" src={blaacirkel} alt="Blå cirkel" />
+
+    <!-- <Image class="col-[2_/_span_7] row-5 md:row-1 md:col-[2_/_span_20] md:row-1 rotate-90" src={Cirkler} alt="Cirkler i forskellige farver" />
     <h1 class="text-7xl uppercase col-[4_/_span_14] row-6 md:col-[5_/_span_17] md:row-6 md:text-9xl z-10">Luna Ring</h1>
     <Heading htmlheading="h2" size="large" stylingclasses="col-[14_/_span_4] row-8 md:row-9 md:col-[14_/_span_4] md:row-9">Digital<br />Designer</Heading>
-    <Image class="col-[22_/_span_2] row-10 md:col-[22_/_span_2] md:row-10" src={blaacirkel} alt="Cirkler i forskellige farver" />
+    <Image class="col-[22_/_span_2] row-10 md:col-[22_/_span_2] md:row-10" src={blaacirkel} alt="Cirkler i forskellige farver" /> -->
   </section>
 
-  <section id="om" class="container mx-auto grid grid-cols-12 mt-30">
+  <section id="om" class="container mx-auto grid grid-cols-12 mb-30">
     <!-- <div class="col-[5_/_span_7] pt-5 md:col-[7_/_span_4] md:pt-10">
       <Heading htmlheading="h3" size="medium">Skills</Heading>
       <Text stylingclasses="text-3xl md:text-5xl">UX RESEARCH, MULTIMEDIEDESIGN, CODING, UI DESIGN, GRAPHIC DESIGN, ANIMATION</Text>
@@ -40,12 +44,18 @@ import loading from "../assets/images/loading.svg";
     <div class="row-1 col-[4_/_span_1] pt-76 md:col-[3_/_span_1] md:pt-67 md:pl-4">
       <Image class="animate-spin" style={{ animationDuration: "6s" }} src={loading} alt="Loading animation" />
     </div>
-    <div class="row-1 col-[2_/_span_4] pt-80 md:col-[2_/_span_3] md:pt-80">
+    <div class="row-1 col-[2_/_span_4] pt-80 md:col-[2_/_span_4] md:pt-80">
       <Heading htmlheading="h3" size="medium">Software ...</Heading>
-      <Text stylingclasses="text-3xl md:text-5xl">FIGMA<br />VS CODE<br />GIT/GITHUB<br />ILLUSTRATOR<br />PREMIERE PRO<br />AFTER EFFECTS<br />PHOTOSHOP</Text>
+      <Text stylingclasses="text-3xl md:text-4xl">FIGMA<br />VS CODE<br />GIT/GITHUB<br />ILLUSTRATOR<br />PREMIERE PRO<br />AFTER EFFECTS<br />PHOTOSHOP</Text>
     </div>
+    <!-- <div class="row-1 col-[6_/_span_6] md:col-[8_/_span_4] md:pt-10">
+      <Image class="grayscale" src={portræt} alt="Portrætfoto" />
+      <Image class="rotate-270" src={Cirkler} alt="Cirkler i forskellige farver" />
+    </div> -->
     <div class="row-1 col-[6_/_span_6] md:col-[8_/_span_4] md:pt-10">
       <Image class="grayscale" src={portræt} alt="Portrætfoto" />
+    </div>
+    <div class="row-1 col-[6_/_span_7] mt-31 pl-15 md:col-[8_/_span_5] md:mt-47 md:pl-15">
       <Image class="rotate-270" src={Cirkler} alt="Cirkler i forskellige farver" />
     </div>
   </section>
