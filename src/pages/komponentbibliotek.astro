@@ -4,13 +4,31 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import Cirkler from "../assets/images/Cirkler.svg";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
 ---
 
 <MainLayout title="Komponentbibliotek">
-  <h1 class="uppercase text-5xl text-secondary-900">Komponentbibliotek</h1>
-  <section class="bg-accent-400 p-10 flex flex-col gap-7">
-    <Link variant="primary" size="small">Link: Primary small</Link>
-    <Link variant="primary" size="medium">Link: Primary medium</Link>
-    <Link variant="primary" size="large">Link: Primary large</Link>
-  </section>
+  <div class="p-10">
+    <Heading htmlheading="h1" size="large" stylingclasses="mt-5 mb-10">Mit komponentbibliotek</Heading>
+    <div class="md:grid grid-cols-12">
+      <section class="bg-accent-400 p-7 mb-7 flex flex-col md:col-span-6">
+        <Heading htmlheading="h2" size="medium" stylingclasses="underline">Link:</Heading>
+        <Link variant="primary" size="small">Primary small</Link>
+        <Link variant="primary" size="medium">Primary medium</Link>
+        <Link variant="primary" size="large">Primary large</Link>
+      </section>
+      <div class="md:col-span-6">
+        <section class="flex flex-col pl-7 mb-7">
+          <Heading htmlheading="h2" size="medium" stylingclasses="underline">Heading:</Heading>
+          <Heading htmlheading="h3" size="large">H1: Overskrift</Heading>
+          <Heading htmlheading="h3" size="medium">H2: Underoverskrift</Heading>
+        </section>
+        <section class="flex flex-col pl-7 mb-7">
+          <Heading htmlheading="h2" size="medium" stylingclasses="underline">Text:</Heading>
+          <Text>Brødtekst</Text>
+        </section>
+      </div>
+    </div>
+  </div>
 </MainLayout>

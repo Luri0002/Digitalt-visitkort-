@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import Cirkler from "../assets/images/Cirkler.svg";
 import arrow from "../assets/images/arrow.svg";
 import Link from "../components/Link.astro";
+import Heading from "../components/Heading.astro";
 ---
 
 <div id="kontakt" class="bg-accent-400 text-primary-900 grid grid-cols-12 mt-40 p-10">
@@ -11,7 +12,7 @@ import Link from "../components/Link.astro";
   </div>
   <div class="col-[3_/_span_8] flex items-center gap-40 md:col-span-6 md:justify-self-center">
     <div class="flex flex-col">
-      <h3 class="uppercase">Kontakt</h3>
+      <Heading htmlheading="h3" size="medium">Kontakt</Heading>
       <Link class="uppercase" href="https://www.linkedin.com/in/luna-ring-521175336/" target="_blank" variant="primary" size="large">Instagram</Link>
       <Link class="uppercase" href="https://www.linkedin.com/in/luna-ring-521175336/" target="_blank" variant="primary" size="large">Linkedin</Link>
       <Link class="uppercase" href="mailto:lulubopsi@gmail.com" variant="primary" size="large">Email</Link>

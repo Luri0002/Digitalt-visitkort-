@@ -12,7 +12,7 @@ import portræt from "../assets/images/portræt.webp";
 import loading from "../assets/images/loading.svg";
 ---
 
-<MainLayout title="Titel">
+<MainLayout title="Forside">
   <section class="container mx-auto grid grid-cols-12 mb-40">
     <Image class="col-[2_/_span_10]" src={hero} alt="Luna Ring, farvede cirkler" />
     <Heading htmlheading="h1" size="large" stylingclasses="col-[9_/_span_2] -mt-7">Digital<br />Designer</Heading>
@@ -30,11 +30,11 @@ import loading from "../assets/images/loading.svg";
       <Text stylingclasses="text-3xl md:text-5xl">UX RESEARCH, MULTIMEDIEDESIGN, CODING, UI DESIGN, GRAPHIC DESIGN, ANIMATION</Text>
       <Image src={Cirkler} alt="Cirkler i forskellige farver" />
     </div> -->
-    <div class="bg-[url(../src/assets/images/cirkler.svg)] bg-contain bg-no-repeat col-[5_/_span_7] pt-5 md:col-[7_/_span_5] md:pt-10">
+    <div class="bg-[url(../src/assets/images/cirkler.svg)] bg-contain bg-no-repeat col-[5_/_span_7] pt-5 md:col-[7_/_span_5] md:pt-10 intersect:animate-fade-up intersect:animate-once intersect:animate-duration-2000 intersect:animate-ease-out">
       <Heading htmlheading="h3" size="medium">Skills</Heading>
       <Text stylingclasses="text-3xl md:text-5xl">UX RESEARCH, MULTIMEDIEDESIGN, CODING, UI DESIGN, GRAPHIC DESIGN, ANIMATION</Text>
     </div>
-    <div class="col-[2_/_span_5] py-5 md:col-[3_/_span_3] md:-order-1 md:pt-50">
+    <div class="col-[2_/_span_5] py-5 md:col-[3_/_span_3] md:-order-1 md:pt-50 intersect:animate-fade-up intersect:animate-once intersect:animate-duration-2000 intersect:animate-ease-out">
       <Heading htmlheading="h3" size="medium">Hej!</Heading>
       <Text>Mit navn er Luna, jeg er 22 år og studerer multimediedesign på Erhvervsakademi København. Som digital designer, er jeg inspireret af mødet mellem klassiske designtendenser & moderne æstetik.</Text>
     </div>
@@ -44,7 +44,7 @@ import loading from "../assets/images/loading.svg";
     <div class="row-1 col-[4_/_span_1] pt-76 md:col-[3_/_span_1] md:pt-67 md:pl-4">
       <Image class="animate-spin" style={{ animationDuration: "6s" }} src={loading} alt="Loading animation" />
     </div>
-    <div class="row-1 col-[2_/_span_4] pt-80 md:col-[2_/_span_4] md:pt-80">
+    <div class="row-1 col-[2_/_span_4] pt-80 md:col-[2_/_span_4] md:pt-80 intersect:animate-fade-up intersect:animate-once intersect:animate-duration-2000 intersect:animate-ease-out">
       <Heading htmlheading="h3" size="medium">Software ...</Heading>
       <Text stylingclasses="text-3xl md:text-4xl">FIGMA<br />VS CODE<br />GIT/GITHUB<br />ILLUSTRATOR<br />PREMIERE PRO<br />AFTER EFFECTS<br />PHOTOSHOP</Text>
     </div>
@@ -52,10 +52,10 @@ import loading from "../assets/images/loading.svg";
       <Image class="grayscale" src={portræt} alt="Portrætfoto" />
       <Image class="rotate-270" src={Cirkler} alt="Cirkler i forskellige farver" />
     </div> -->
-    <div class="row-1 col-[6_/_span_6] md:col-[8_/_span_4] md:pt-10">
+    <div class="row-1 col-[6_/_span_6] md:col-[8_/_span_4] md:pt-10 intersect:animate-fade-up intersect:animate-once intersect:animate-duration-2000 intersect:animate-ease-out">
       <Image class="grayscale" src={portræt} alt="Portrætfoto" />
     </div>
-    <div class="row-1 col-[6_/_span_7] mt-31 pl-15 md:col-[8_/_span_5] md:mt-47 md:pl-15">
+    <div class="row-1 col-[6_/_span_7] mt-31 pl-15 md:col-[8_/_span_5] md:mt-47 md:pl-15 intersect:animate-fade-up intersect:animate-once intersect:animate-duration-2000 intersect:animate-ease-out">
       <Image class="rotate-270" src={Cirkler} alt="Cirkler i forskellige farver" />
     </div>
   </section>
