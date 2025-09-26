@@ -1,27 +1,34 @@
 ---
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
+import { Image } from "astro:assets";
+import logo from "../assets/images/logo.svg";
+import Text from "../components/Text.astro";
 ---
 
 <header x-data="{ showmenu: false }" class="bg-primary-900">
-  <div id="navbar" class="container mx-auto p-4 flex flex-row justify-between items-center">
+  <nav id="navbar" class="container mx-auto p-4 flex flex-row justify-between items-center">
     <div id="logo" class="">
-      <a href="#" class="font-display text-4xl"></a>
+      <a href="#" class="">
+        <Image class="scale-50 md:scale-75 lg:scale-95" src={logo} alt="Logo - orange cirkel" />
+      </a>
     </div>
     <nav id="desktopmenu" class="hidden lg:block">
-      <ul class="flex flex-row gap-6">
-        <li class="uppercase"><a href="/" class={currentPath === "" ? "underline" : ""}>Forside</a></li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
-        <li class="uppercase"><a href="#om" class={currentPath === "#om" ? "underline" : ""}>Om mig</a></li>
-        <li class="uppercase"><a href="#kontakt" class={currentPath === "#kontakt" ? "underline" : ""}>Kontakt</a></li>
-        <li class="uppercase"><a href="/komponentbibliotek/" class={currentPath === "komponentbibliotek/" ? "underline" : ""}>Komponentbibliotek</a></li>
+      <ul class="flex flex-row gap-10">
+        <li class="uppercase"><a href="#om" class={currentPath === "#om" ? "underline" : ""}><Text teksttype="menudesktop" stylingclasses="hover:text-orange-900">Om</Text></a></li>
+        <li class="uppercase"><a href="#projekter" class={currentPath === "#projekter" ? "underline" : ""}><Text teksttype="menudesktop" stylingclasses="hover:text-orange-900">Projekter</Text></a></li>
+        <li class="uppercase"><a href="#cv" class={currentPath === "#cv" ? "underline" : ""}><Text teksttype="menudesktop" stylingclasses="hover:text-orange-900">CV</Text></a></li>
+        <li class="uppercase"><a href="#kontakt" class={currentPath === "#kontakt" ? "underline" : ""}><Text teksttype="menudesktop" stylingclasses="hover:text-orange-900">Kontakt</Text></a></li>
       </ul>
     </nav>
-    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">Menu</button>
-  </div>
-  <nav id="mobilmenu" class="flex flex-col content-center" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-    <ul class="border-t-2 border-b-2 border-secondary-900">
-      <li class="text-center py-2"><a href="/" class={currentPath === "" ? "underline" : ""}>Forside</a></li>
-      <li class="text-center py-2"><a href="/komponentbibliotek/" class={currentPath === "komponentbibliotek/" ? "underline" : ""}>Komponentbibliotek</a></li>
+    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">MENU</button>
+  </nav>
+  <nav id="mobilmenu" class="flex flex-col bg-orange-900 mb-10 text-primary-900" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+    <ul class="pl-10">
+      <li class="uppercase pb-1 pt-20"><a href="#om" class={currentPath === "#om" ? "underline" : ""}><Text>Om</Text></a></li>
+      <li class="uppercase py-1"><a href="#projekter" class={currentPath === "#projekter" ? "underline" : ""}><Text>Projekter</Text></a></li>
+      <li class="uppercase py-1"><a href="#cv" class={currentPath === "#cv" ? "underline" : ""}><Text>CV</Text></a></li>
+      <li class="uppercase pt-1 pb-7"><a href="#kontakt" class={currentPath === "#kontakt" ? "underline" : ""}><Text>Kontakt</Text></a></li>
     </ul>
   </nav>
 </header>

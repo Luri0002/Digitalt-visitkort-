@@ -1,0 +1,12 @@
+---
+const { h3, p, link, target, stylingclasses = "" } = Astro.props;
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+---
+
+<a href={link} target={target}>
+  <article class="text-primary-900 uppercase p-10 aspect-square max-w-115" class:list={[stylingclasses]}>
+    <Heading stylingclasses="mb-4" htmlheading="h3" size="medium" font="underoverskrift">{h3}</Heading>
+    <Text stylingclasses="text-3xl md:text-4xl">{p}</Text>
+  </article>
+</a>
