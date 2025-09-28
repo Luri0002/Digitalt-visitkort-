@@ -9,6 +9,7 @@ import Text from "../components/Text.astro";
 import { Image } from "astro:assets";
 import Cirkler from "../assets/images/Cirkler.svg";
 import arrowshort from "../assets/images/arrowshort.svg";
+import herony from "../assets/images/herony.svg";
 import studieprojektercirkler from "../assets/images/studieprojektercirkler.webp";
 import datavisualisering from "../assets/images/datavisualisering 1.png";
 import pn from "../assets/images/pn.webp";
@@ -21,34 +22,33 @@ import ToolsCard from "../components/ToolsCard.astro";
 ---
 
 <MainLayout title="Forside">
-  <section class="container mx-auto grid grid-cols-12 mb-40">
-    <Image class="col-[2_/_span_10]" src={hero} alt="Luna Ring, farvede cirkler" />
-    <Heading htmlheading="h1" size="large" stylingclasses="col-[9_/_span_2] -mt-7">Digital<br />Designer</Heading>
-    <Image class="pl-3 col-[11_/_span_1] -mb-7" src={blaacirkel} alt="Blå cirkel" />
+  <section class="container mx-auto grid grid-cols-12 mt-15 mb-25">
+    <Image class="col-span-8 col-start-3" src={herony} alt="Luna Ring, farvede cirkler" />
+    <Heading htmlheading="h1" size="large" stylingclasses="col-start-3 col-span-7 md:col-start-3 md:col-span-5 -mt-10 md:-mt-25 lg:-mt-35">Multimediedesigner<br />Søger <span class="text-accent-900">Praktik</span></Heading>
   </section>
   <Banner />
 
   <section id="om" class="p-10 md:container md:mx-auto grid grid-cols-12 md:gap-10 md:grid-rows-1">
-    <div class="col-span-8 col-start-1 row-1 pb-10 md:pb-0 md:self-center md:col-span-4 md:col-start-2">
+    <div class="col-span-10 col-start-1 row-1 pb-10 md:pb-0 md:self-center md:col-span-6 md:col-start-1 lg:col-span-4 lg:col-start-2">
       <Heading htmlheading="h3" size="medium">Hej!</Heading>
       <Text>Mit navn er Luna, jeg er 22 år og studerer multimediedesign med fokus på digital design, på Erhvervsakademi København. Jeg søger en praktikplads, hvor jeg kan bidrage med ny energi og udvikle mine faglige kompetencer.</Text>
     </div>
-    <div class="col-span-8 col-start-5 row-2 md:row-1 md:col-span-4 md:col-start-9">
+    <div class="col-span-8 col-start-5 row-2 md:row-1 md:col-span-5 md:col-start-8 lg:col-span-4 lg:col-start-9">
       <Image class="grayscale" src={portræt} alt="Portrætfoto" />
     </div>
-    <div class="col-span-7 col-start-6 row-2 mt-30 md:row-1 md:mt-58 md:col-span-3 md:col-start-10 intersect:animate-fade-up intersect:animate-once intersect:animate-duration-2000 intersect:animate-ease-out">
+    <div class="col-span-7 col-start-6 row-2 mt-30 md:row-1 md:mt-40 md:col-span-4 md:col-start-9 lg:mt-58 lg:col-span-3 lg:col-start-10 intersect:animate-fade-up intersect:animate-once intersect:animate-duration-2000 intersect:animate-ease-out">
       <Image class="" src={studieprojektercirkler} alt="Cirkler i forskellige farver" />
     </div>
   </section>
 
   <section class="p-10 md:container md:mx-auto md:gap-10 grid grid-cols-12 grid-rows-1">
-    <div class="row-1 bg-[url('/images/Cirkler.svg')] bg-contain bg-no-repeat col-span-11 col-start-1 pb-20 md:pb-0 md:col-span-6 md:col-start-1 lg:col-span-8 intersect:animate-fade-up intersect:animate-once intersect:animate-duration-2000 intersect:animate-ease-out">
+    <div class="row-1 bg-[url('/images/Cirkler.svg')] bg-contain bg-no-repeat col-span-11 col-start-1 pb-20 md:pb-0 md:col-span-9 md:col-start-1 lg:col-span-8 intersect:animate-fade-up intersect:animate-once intersect:animate-duration-2000 intersect:animate-ease-out">
       <Heading htmlheading="h3" size="medium">DET KAN JEG</Heading>
       <Text stylingclasses="text-3xl md:text-5xl lg:text-7xl">UX/UI DESIGN,<br />CODING, ACCESSIBILITY, DESIGN RESEARCH, GRAPHIC DESIGN...</Text>
     </div>
-    <div class="row-2 col-span-8 col-start-5 md:col-span-4 md:col-start-8">
+    <div class="row-2 col-span-10 col-start-3 md:col-span-6 md:col-start-7 lg:col-span-4 lg:col-start-8">
       <Heading htmlheading="h3" size="medium">DET ØVER JEG MIG I</Heading>
-      <Text>Jeg vil meget gerne styrke mine færdigheder i Adobe pakken - gerne indenfor animation og grafik. Generelt er jeg ivrig for, at lære nyt, indenfor digital design og udvikling.</Text>
+      <Text>Jeg vil meget gerne styrke mine færdigheder i Adobe pakken - gerne indenfor animation og grafik. Generelt er jeg ivrig for at lære nyt, indenfor digital design og udvikling.</Text>
     </div>
   </section>
 
@@ -72,22 +72,25 @@ import ToolsCard from "../components/ToolsCard.astro";
     <Heading htmlheading="h2" size="large" stylingclasses="mb-10"><span class="text-base md:text-xl">et par</span><br />STUDIEPROJEKTER</Heading>
     <div class="grid grid-cols-2 gap-10 md:grid md:grid-cols-12">
       <div class="col-span-1 md:col-span-3">
-        <a class="hover:text-orange-900 transition-all duration-300 ease-in-out" href="https://1257degrees.netlify.app/" target="_blank">
+        <a class="hover:text-accent-900 transition-all duration-300 ease-in-out" href="https://1257degrees.netlify.app/" target="_blank">
           <Image class="mt-10 md:mt-0 lg:grayscale lg:hover:grayscale-0 lg:transition-all duration-300 ease-in-out" src={keramik} alt="Website for keramikværksted" />
           <Text stylingclasses="mt-2"><span class="underline">Website</span> for et keramikværksted</Text>
         </a>
       </div>
       <div class="col-span-1 md:col-span-3">
-        <!-- <video autoplay muted loop>
-        <source src="public/Unavngivet.mp4" type="video/mp4" />
-        Din browser understøtter ikke video-tag.
-      </video> -->
-        <Image class="lg:grayscale lg:hover:grayscale-0 lg:transition-all duration-300 ease-in-out" src={datavisualisering} alt="Datavisualisering" />
+        <div class="lg:grayscale lg:hover:grayscale-0 lg:transition-all duration-300 ease-in-out">
+          <video id="datavisualiseringVideo" autoplay muted loop playsinline controls>
+            <source src="/datavisualisering-cut.mp4" type="video/mp4" />
+            Din browser understøtter ikke video-tag.
+          </video>
+        </div>
+
+        <!-- <Image class="lg:grayscale lg:hover:grayscale-0 lg:transition-all duration-300 ease-in-out" src={datavisualisering} alt="Datavisualisering" /> -->
         <Text stylingclasses="mt-2 mb-10">Datavisualisering lavet i Adobe Premiere Pro</Text>
       </div>
       <Image class="md:-mt-30 lg:-mt-59 col-span-1 md:col-span-3 md:order-last intersect:animate-fade-up intersect:animate-once intersect:animate-duration-2000 intersect:animate-ease-out" src={studieprojektercirkler} alt="Cirkler i forskellige farver" />
-      <div class="col-span-1 md:col-span-3">
-        <a class="hover:text-orange-900 transition-all duration-300 ease-in-out" href="https://1257degrees.netlify.app/" target="_blank">
+      <div class="col-span-1 mt-4 md:mt-0 md:col-span-3">
+        <a class="hover:text-accent-900 transition-all duration-300 ease-in-out" href="https://kjal-studios.netlify.app/" target="_blank">
           <Image class="-mt-30 md:mt-0 lg:grayscale lg:hover:grayscale-0 lg:transition-all duration-300 ease-in-out" src={pn} alt="Kampangesite for Pårørende Netværket" />
           <Text stylingclasses="mt-2"><span class="underline">Kampagnesite</span> for Pårørende Netværket</Text>
         </a>
@@ -117,7 +120,7 @@ import ToolsCard from "../components/ToolsCard.astro";
       <div class="pb-15 md:pb-35 flex items-center">
         <Text stylingclasses="pr-5">2026</Text>
         <div class="mr-5 w-70 h-1 bg-secondary-900"></div>
-        <Text stylingclasses="">EK, multimediedesign</Text>
+        <Text stylingclasses="">Erhvervsakademi København (tidl. KEA), multimediedesign</Text>
       </div>
 
       <div class="flex items-center">
@@ -129,7 +132,7 @@ import ToolsCard from "../components/ToolsCard.astro";
   </section>
 
   <section class="p-10 md:container md:mx-auto md:mb-30 grid grid-cols-1 gap-10 md:grid md:grid-cols-2">
-    <BigButton stylingclasses="bg-yellow-900 md:ml-auto hover:bg-primary-900 hover:text-yellow-900 hover:border-4 hover:border-yellow-900" h3="LIDT MERE INFO ?" p="klik her for mit cv!" target="_blank" link="https://example.com/cv" />
-    <BigButton stylingclasses="bg-orange-900 hover:bg-primary-900 hover:text-orange-900 hover:border-4 hover:border-orange-900" h3="KUNNE VI VÆRE ET MATCH ?" p="TØV IKKE MED AT TAGE KONTAKT TIL EN SAMTALE - VILLE ELSKE AT KOMME I PRAKTIK HOS JER." link="#kontakt" />
+    <BigButton stylingclasses="bg-yellow-900 md:ml-auto hover:bg-primary-900 hover:text-yellow-900 hover:border-4 hover:border-yellow-900" h3="KUNNE VI VÆRE ET MATCH ?" p="KONTAKT MIG FOR EN SAMTALE!" link="#kontakt" />
+    <BigButton stylingclasses="bg-orange-900 hover:bg-primary-900 hover:text-orange-900 hover:border-4 hover:border-orange-900" h3="LIDT MERE INFO ?" p="klik her for mit cv!" target="_blank" link="https://example.com/cv" />
   </section>
 </MainLayout>

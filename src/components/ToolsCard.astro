@@ -1,13 +1,25 @@
 ---
 const { h3, stylingclasses = "" } = Astro.props;
 import Heading from "../components/Heading.astro";
-import Text from "../components/Text.astro";
 ---
 
-<article class="text-primary-900 uppercase p-10 aspect-square max-w-115 grid grid-cols-[1fr_5fr]" class:list={[stylingclasses]}>
-  <svg class="h-full w-auto intersect:animate-fade-down animate-once animate-duration-[1500ms]" viewBox="0 0 30 395" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- <article class="text-primary-900 uppercase p-10 aspect-square max-w-115 grid grid-cols-[1fr_5fr]" class:list={[stylingclasses]}>
+  <svg class="mr-2 h-full w-auto intersect:animate-fade-down animate-once animate-duration-[1500ms]" viewBox="0 0 30 395" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M13.5858 394.414C14.3668 395.195 15.6331 395.195 16.4142 394.414L29.1421 381.686C29.9232 380.905 29.9232 379.639 29.1421 378.858C28.3611 378.077 27.0947 378.077 26.3137 378.858L15 390.172L3.68627 378.858C2.90523 378.077 1.6389 378.077 0.857848 378.858C0.0767992 379.639 0.0767991 380.905 0.857848 381.686L13.5858 394.414ZM15 0L13 -8.74231e-08L13 393L15 393L17 393L17 8.74231e-08L15 0Z" fill="white"></path>
   </svg>
+  <div class="flex flex-col">
+    <Heading stylingclasses="mb-4 lg:mt-auto lg:mb-0 lg:order-last lg:text-4xl" htmlheading="h3" size="medium" font="underoverskrift">{h3}</Heading>
+    <div class="slot-wrapper">
+      <slot />
+    </div>
+  </div>
+</article> -->
+<article class="text-primary-900 uppercase p-10 aspect-square max-w-115 lg:grid lg:grid-cols-[1fr_5fr]" class:list={[stylingclasses]}>
+  <div class="slot-wrapper-reverse">
+    <svg class="intersect:animate-fade-down animate-once animate-duration-[1500ms]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-15">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+    </svg>
+  </div>
   <div class="flex flex-col">
     <Heading stylingclasses="mb-4 lg:mt-auto lg:mb-0 lg:order-last lg:text-4xl" htmlheading="h3" size="medium" font="underoverskrift">{h3}</Heading>
     <div class="slot-wrapper">
@@ -31,6 +43,13 @@ import Text from "../components/Text.astro";
     article:hover .slot-wrapper {
       opacity: 1;
       pointer-events: auto;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    /* mobil */
+    .slot-wrapper-reverse {
+      display: none;
     }
   }
 </style>
